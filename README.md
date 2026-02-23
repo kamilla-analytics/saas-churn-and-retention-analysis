@@ -1,62 +1,101 @@
-# SaaS Customer Retention & Churn Analysis  
-### Business Analytics Case Study
+# SaaS Subscription Churn & Revenue Analysis
 
-## Business Problem
+## Project Overview
 
-A SaaS subscription-based company aims to better understand customer churn and retention drivers in order to reduce revenue loss and improve long-term growth.
+This project analyzes subscription-level churn and revenue dynamics 
+for a SaaS company using R and MySQL.
 
-This analysis explores behavioral and subscription patterns to identify high-risk customer segments and provide actionable retention recommendations.
-
----
-
-## Data Source
-
-- Public SaaS Subscription & Churn dataset (Kaggle)
-- Customer-level subscription, activity, and churn indicators
-
----
-
-## Tools & Technologies
-
-- R (data cleaning & analysis)
-- SQL (aggregation & segmentation)
-- Tableau (dashboard & business visualization)
-- GitHub (documentation & version control)
-
----
-
-## Analytical Focus
-
-- Churn rate analysis  
-- Customer segmentation  
-- Revenue impact assessment  
-- Retention behavior patterns  
-- Identification of high-risk customer groups  
+The objective is to identify key churn drivers, evaluate revenue exposure, 
+and propose retention-focused business recommendations.
 
 ---
 
 ## Business Questions
 
-1. What factors are associated with higher churn probability?
-2. Which customer segments generate the highest lifetime value?
-3. How does churn impact recurring revenue?
-4. What retention strategies can be recommended?
+- What is the overall churn rate?
+- How much recurring revenue is exposed to churn?
+- Which subscription tiers drive the highest financial risk?
+- Is churn concentrated in specific lifecycle stages?
+- How does billing frequency impact retention?
 
 ---
 
-## Expected Business Impact
+## Tools & Technologies
 
-Insights from this analysis can support:
-
-- Retention-focused marketing campaigns  
-- Subscription pricing optimization  
-- Customer lifecycle strategy improvements  
-- Revenue stabilization initiatives  
+- **R (tidyverse, lubridate)** - data exploration & lifecycle analysis  
+- **MySQL** - business metric replication & schema normalization  
+- **GitHub** – project structure & reproducibility  
 
 ---
 
-## Next Steps
+## Key Metrics
 
-- Cohort retention analysis  
-- Revenue forecasting  
-- Predictive churn modeling
+- **Overall churn rate:** ~9.7%  
+- **Total MRR:** ~$11.3M  
+- **MRR lost to churn:** ~$1.18M  
+- **Revenue exposure:** ~10% of total recurring revenue  
+
+---
+
+## Key Insights
+
+1. **Enterprise subscriptions drive disproportionate revenue loss**  
+   Although churn rates are similar across plans, higher MRR in Enterprise 
+   accounts results in greater financial exposure.
+
+2. **Churn is heavily concentrated within the first 12 months**  
+   Subscriptions surviving beyond one year demonstrate significantly 
+   stronger retention stability.
+
+3. **Annual billing does not significantly reduce churn**  
+   Churn differences between monthly and annual billing are marginal.
+
+4. **Trial churn has limited direct revenue impact**  
+   Financial risk is primarily concentrated within paid subscriptions.
+
+---
+
+## Strategic Implications
+
+- Focus retention initiatives on early lifecycle stages (0–12 months)
+- Prioritize high-value Enterprise accounts for proactive retention
+- Improve onboarding and early value realization
+- Monitor revenue exposure by plan tier, not just churn rate
+
+---
+
+## Project Structure
+
+saas-churn-analysis/
+│
+├── data/ # Source dataset (Kaggle)
+├── notebooks/
+│ └── 01_data_exploration.R
+├── sql/
+│ ├── 00_schema_cleaning.sql
+│ └── 01_business_analysis.sql
+├── dashboard/ # Tableau dashboard
+├── presentation/ # Business summary slides
+└── README.md
+
+
+---
+
+## SQL Highlights
+
+The SQL portion demonstrates:
+
+- Data type normalization & schema cleaning  
+- Aggregation with COUNT, SUM, AVG  
+- Conditional logic with CASE WHEN  
+- Lifecycle calculation using DATEDIFF & COALESCE  
+- Revenue exposure analysis  
+- Multi-table JOIN example  
+
+---
+
+## Outcome
+
+This project simulates a real-world SaaS churn analysis workflow, 
+combining data cleaning, metric development, segmentation, 
+and lifecycle-based retention analysis.
