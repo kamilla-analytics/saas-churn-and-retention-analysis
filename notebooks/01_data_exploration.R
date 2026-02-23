@@ -19,11 +19,11 @@ library(lubridate)
 # 2. Load Data
 # -------------------------
 
-accounts <- read_csv("ravenstack_accounts.csv")
-subscriptions <- read_csv("ravenstack_subscriptions.csv")
-churn <- read_csv("ravenstack_churn_events.csv")
-usage <- read_csv("ravenstack_feature_usage.csv")
-support <- read_csv("ravenstack_support_tickets.csv")
+accounts <- read_csv("data/ravenstack_accounts.csv")
+subscriptions <- read_csv("data/ravenstack_subscriptions.csv")
+churn <- read_csv("data/ravenstack_churn_events.csv")
+usage <- read_csv("data/ravenstack_feature_usage.csv")
+support <- read_csv("data/ravenstack_support_tickets.csv")
 
 # -------------------------
 # 3. Initial Data Exploration
