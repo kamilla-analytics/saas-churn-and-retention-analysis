@@ -64,20 +64,13 @@ and propose retention-focused business recommendations.
 
 ---
 
-## Project Structure
+## Repository Structure
 
-saas-churn-analysis/
-│
-├── data/ # Source dataset (Kaggle)
-├── notebooks/
-│ └── 01_data_exploration.R
-├── sql/
-│ ├── 00_schema_cleaning.sql
-│ └── 01_business_analysis.sql
-├── dashboard/ # Tableau dashboard
-├── presentation/ # Business summary slides
-└── README.md
-
+- **data/** – Source dataset (Kaggle)
+- **notebooks/** – R-based exploratory analysis
+- **sql/** – Schema cleaning & business-level SQL queries
+- **dashboard/** – Tableau visualization
+- **presentation/** – Executive summary slides
 
 ---
 
