@@ -1,0 +1,51 @@
+# ==========================================================
+# SaaS Customer Retention & Churn Analysis
+# Author: Kamilla
+# Description: Subscription-level churn & revenue analysis
+# ==========================================================
+
+# -------------------------
+# 1. Load Packages
+# -------------------------
+
+library(tidyverse)
+library(lubridate)
+
+# -------------------------
+# 2. Load Data
+# -------------------------
+
+accounts <- read_csv("ravenstack_accounts.csv")
+subscriptions <- read_csv("ravenstack_subscriptions.csv")
+churn <- read_csv("ravenstack_churn_events.csv")
+usage <- read_csv("ravenstack_feature_usage.csv")
+support <- read_csv("ravenstack_support_tickets.csv")
+
+# -------------------------
+# 3. Initial Exploration
+# -------------------------
+
+glimpse(subscriptions)
+
+# -------------------------
+# 4. Core Business Metrics
+# -------------------------
+
+# Overall churn rate
+subscriptions %>%
+  summarise(
+    total_subscriptions = n(),
+    churned = sum(churn_flag == TRUE),
+    churn_rate = mean(churn_flag == TRUE)
+  )
+# Result: 9.72% of subscriptions churned.
+# This indicates a moderate churn level across the dataset.
+
+# Total MRR
+subscriptions %>%
+  summarise(
+    total_mrr = sum(mrr_amount, na.rm = TRUE)
+  )
+# With a total MRR of 11,338,747, even small increases in churn 
+# could result in significant revenue loss, highlighting the 
+# importance of retention-focused strategies.
