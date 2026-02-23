@@ -119,3 +119,20 @@ SELECT
 FROM ravenstack_subscriptions
 GROUP BY tenure_bucket
 ORDER BY churn_rate DESC;
+
+
+-- ----------------------------------------------------------
+-- 9. Churn Rate by Country (JOIN Example)
+-- ----------------------------------------------------------
+-- Analyze churn behavior across customer countries
+
+SELECT 
+    a.country,
+    COUNT(*) AS total_subscriptions,
+    ROUND(AVG(s.churn_flag), 4) AS churn_rate,
+    ROUND(AVG(s.mrr_amount), 2) AS avg_mrr
+FROM ravenstack_subscriptions s
+JOIN ravenstack_accounts a
+    ON s.account_id = a.account_id
+GROUP BY a.country
+ORDER BY churn_rate DESC;
