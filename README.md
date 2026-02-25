@@ -9,7 +9,7 @@ The goal of this project was to explore churn behavior, identify risk segments, 
 ## Tableau Dashboard
 
 <p align="center">
-  <img src="dashboard/dashboard_preview.png" width="900">
+  <img src="dashboard/Dashboard 1.png" width="900">
 </p>
 
 Dashboard file:  
