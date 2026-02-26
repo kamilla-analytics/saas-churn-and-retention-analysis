@@ -13,7 +13,7 @@ The goal of this project was to explore churn behavior, identify risk segments, 
 </p>
 
 Dashboard file:  
-[Download Tableau file (.twbx)](dashboard/saas_churn_dashboard.twbx)
+[Download Tableau file (.twbx)](dashboard/Dashboard 1.twbx)
 
 ---
 
@@ -71,6 +71,13 @@ In R, I:
 
 File:
 - `notebooks/01_data_exploration.R`
+
+---
+
+## Presentation
+
+Executive summary slides:  
+[Download Presentation (PDF)](presentation/saas_churn_executive_summary.pdf)
 
 ---
 
