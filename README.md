@@ -9,11 +9,11 @@ The goal of this project was to explore churn behavior, identify risk segments, 
 ## Tableau Dashboard
 
 <p align="center">
-  <img src="dashboard/Dashboard 1.png" width="900">
+  <img src="dashboard/saas_churn_dashboard.png" width="900">
 </p>
 
 Dashboard file:  
-[Download Tableau file (.twbx)](dashboard/Dashboard 1.twbx)
+[Download Tableau file (.twbx)](dashboard/saas_churn_dashboard.twbx.twbx)
 
 ---
 
